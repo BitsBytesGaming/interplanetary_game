@@ -10,5 +10,6 @@ The game already includes several features, including the following commands:
 "move" - allows travel between the 16 different sectors in cardinal directions (up, down, left, and right)
 "examine" - reveals characteristics about the currently occupied sector
 "puzzle" - checks whether a puzzle can be solved in the currently occupied sector
+"solve" - checks if a sector's puzzle can be solved, then prompts for the sector key conditionally
 "loot" -  loots sector for a random number of credits (currently can only be done once, but a repuation system may be added in the future)
 "money" - prints the current number of credits owned by the player
