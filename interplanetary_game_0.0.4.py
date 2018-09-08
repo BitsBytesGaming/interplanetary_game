@@ -298,7 +298,7 @@ def print_location():
 def prompt():
     print("\n What would you like to do?")
     action = input("> ")
-    acceptable_actions = ['quit', 'exit', 'move', 'go', 'travel', 'quit', 'examine', 'inspect', 'interact', 'look', 'puzzle', 'loot', 'money', 'credits']
+    acceptable_actions = ['quit', 'exit', 'move', 'go', 'travel', 'quit', 'examine', 'inspect', 'interact', 'look', 'puzzle', 'solve', 'loot', 'money', 'credits']
     while action.lower() not in acceptable_actions:
         print("Unknown action, please try again.\n")
         action = input("> ")
