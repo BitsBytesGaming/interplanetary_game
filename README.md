@@ -17,6 +17,6 @@ The game already includes several features, including the following commands:
 
  - "solve" - checks if a sector's puzzle can be solved, then prompts for the sector key conditionally
 
- - "loot" -  loots sector for a random number of credits (currently can only be done once, but a reputation system may be added in the future)
+ - "loot" -  loots sector for a random number of credits (currently can only be done once in each sector, but a reputation system may be added in the future)
 
  - "money" - prints the current number of credits owned by the player
