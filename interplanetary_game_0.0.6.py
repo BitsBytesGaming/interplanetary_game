@@ -512,16 +512,16 @@ def player_loot(action):
             loot_value = random.randint(100, 149)
         elif loot_decider in [10]:
             loot_value = random.randint(150, 199)
-        myPlayer.money += loot_value
-        zonemap[myPlayer.location] = True
         loot_str2 = "\nYou successfully looted this sector for " + str(loot_value) + " credits.\n"
+        myPlayer.money += loot_value
+        looted_places[myPlayer.location] == True
         for character in loot_str2:
           sys.stdout.write(character)
           sys.stdout.flush()
           time.sleep(0.05)
     else:
-        loot_str2 = "You have already looted this sector.\n"
-        for character in loot_str2:
+        loot_str3 = "You have already looted this sector.\n"
+        for character in loot_str3:
           sys.stdout.write(character)
           sys.stdout.flush()
           time.sleep(0.05)
