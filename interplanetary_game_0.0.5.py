@@ -382,6 +382,7 @@ def print_location():
           sys.stdout.write(character)
           sys.stdout.flush()
           time.sleep(0.02)
+    time.sleep(1)
 
 def prompt():
     prompt_str1 = ("\nWhat would you like to do?\n")
