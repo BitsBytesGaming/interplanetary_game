@@ -20,19 +20,3 @@ The game already includes several features, including the following commands:
  - "loot" -  loots sector for a random number of credits (currently can only be done once in each sector, but a reputation system may be added in the future)
 
  - "money" - prints the current number of credits owned by the player
-
-Sector Map:
-
-### MAP ###
-"""
-a1 a2... # PLAYER STARTS AT c3
------------------
-|   |   |   |   | a4
------------------
-|   |   |   |   | b4
------------------
-|   |   |   |   | ...
------------------
-|   |   |   |   |
------------------
-"""
