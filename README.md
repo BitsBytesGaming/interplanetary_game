@@ -2,6 +2,7 @@
 Official repository for versions of the game Interplanetary, written in Python 3.7
 
 This project was started on September 2, 2018.
+
 (readme last updated on September 14, 2018)
 
 This game was created to imagine the idea of discovering new star systems more closely than by observation with telescopes from Earth.
