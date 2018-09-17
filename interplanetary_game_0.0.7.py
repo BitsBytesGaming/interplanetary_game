@@ -542,26 +542,27 @@ def player_loot(action):
     loot_value = random.randint(150, 199)
   loot_str2 = "\nYou successfully looted this sector for " + str(loot_value) + " credits.\n"
   myPlayer.money += loot_value
-  loot_punish = int(10^2)/1+(int(loot_value)^2)
-  loot_str3 = "\nAdditionally, you have lost " + str(loot_punish) + " reputation in Sector " + str(zonemap[myPlayer.location])
+  loot_punish_int = int(int(10^2)/(1+(int(loot_value)^3)))
+  loot_str3 = "\nAdditionally, you have lost " + str(loot_punish_int) + " reputation in Sector " + myPlayer.location.upper() + ".\nYou now have " + str(zonemap[myPlayer.location][REPUTATION]) + " reputation in this sector.\n"
   looted_places[myPlayer.location] = True
-  loot_punish = False
-  loot_punish_bool = random.randint(0,1)
-  if loot_punish_bool == 0:
-      loot_punish = False
+  loot_punish_bool = random.randint(0,2)
+  if loot_punish_bool in [0,1]:
+      loot_punish_bool = True
   else:
-      loot_punish = True
+      loot_punish_bool = False
   for character in loot_str2:
     sys.stdout.write(character)
     sys.stdout.flush()
     time.sleep(0.05)
   time.sleep(0.5)
-  if loot_punish == True:
+  if loot_punish_bool == True:
+      zonemap[myPlayer.location][REPUTATION] -= loot_punish_int
       for character in loot_str3:
           sys.stdout.write(character)
           sys.stdout.flush()
           time.sleep(0.05)
   time.sleep(0.5)
+
 #    else:
 #        loot_str4 = "\nYou have already looted this sector.\n"
 #        for character in loot_str4:
@@ -580,7 +581,7 @@ def player_money(action):
 
 def player_reputation(action):
   reputation = zonemap[myPlayer.location][REPUTATION]
-  reputation_str = "\nYou have " + str(reputation) + " reputation in the " + str(zonemap[myPlayer.location]) + "\n"
+  reputation_str = "\nYou have " + str(reputation) + " reputation in Sector " + myPlayer.location.upper() + ".\n"
   for character in reputation_str:
     sys.stdout.write(character)
     sys.stdout.flush()
