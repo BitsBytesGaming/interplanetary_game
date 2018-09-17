@@ -580,7 +580,7 @@ def player_money(action):
 
 def player_reputation(action):
   reputation = zonemap[myPlayer.location][REPUTATION]
-  reputation_str = "\nYou have " + str(reputation) + " reputation in the " + zonemap[myPlayer.location][ZONENAME] + "\n"
+  reputation_str = "\nYou have " + str(reputation) + " reputation in the " + str(zonemap[myPlayer.location]) + "\n"
   for character in reputation_str:
     sys.stdout.write(character)
     sys.stdout.flush()
@@ -609,7 +609,7 @@ def setup_game():
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
-    time,sleep(0.5)
+    time.sleep(0.5)
     for character in question2added:
         sys.stdout.write(character)
         sys.stdout.flush()
