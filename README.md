@@ -3,7 +3,7 @@ Official repository for versions of the game Interplanetary, written in Python 3
 
 This project was started on September 2, 2018.
 
-(readme last updated on September 14, 2018)
+(readme last updated on September 18, 2018)
 
 This game was created to imagine the idea of discovering new star systems more closely than by observation with telescopes from Earth.
 
@@ -25,4 +25,4 @@ The game already includes several features, including the following commands:
 
  - "money" - prints the current number of credits owned by the player
 
- - "reputation" - prints the current value of reputation in the sector in which the player currently is
+ - "reputation" - prints the current value of reputation in the currently occupied sector
