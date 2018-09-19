@@ -4,10 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Planned features (backlog)
+- Resources and trading
+- Reputation
+- Faction control
+
+## [0.0.6] - 2018-09-12
+
+### Added
+- Write sector names, descriptions and examination strings
+
+### Changed
+- Replace single-use player_loot() with multiple-use system
+- Switch some player job attributes due to balance concerns
+
 ## [0.0.5] - 2018-09-11
 
 ### Added
 - Create player_money() function (prints the current value of money owned by the player)
+
+### Changed
+- Switch all line printouts in functions to per-character functions using sys.stdout and time.sleep() libraries
 
 ## [0.0.4] - 2018-09-10
 
@@ -19,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Create player_puzzle() function (checks current sector for solved status)
 - Add question3 inside setup_game() to obtain job choice
+- Add sector solve code segments in zonemap dictionary
 
 ### Changed
 - Switch main player jobs to dynamically configure player point values in myPlayer class rather than random values
