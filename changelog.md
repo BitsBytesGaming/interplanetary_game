@@ -9,9 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reputation
 - Faction control
 
-## [0.0.7] - 2018-09-15
+## Current tasks
+- Write sector keys
+- Update sector names, descriptions, and examination strings
 
-## [0.0.6] - 2018-09-12
+## [0.0.7] - 2018-09-19
+
+### Added
+
+## [0.0.6] - 2018-09-13
 
 ### Added
 - Write sector names, descriptions and examination strings
