@@ -13,10 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Write sector keys
 - Update sector names, descriptions, and examination strings
 
+## [[0.0.8] - 2018-10-01
+
+### Added
+- Simplify starting questions with integer inputs
+
+### Changed
+- Correct strings directly involved with 
+
 ## [0.0.7] - 2018-09-19
 
 ### Added
-- null
+- Add information to shift to numerical inputs with text boxes
 
 ## [0.0.6] - 2018-09-13
 
