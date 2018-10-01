@@ -348,35 +348,35 @@ def title_screen():
     for character in title_str2:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str3:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str4:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str5:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str6:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str7:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str8:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     for character in title_str9:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.015)
+        time.sleep(0.01)
     title_screen_selections()
 
 def help_menu():
@@ -792,6 +792,10 @@ def player_solve(action):
           time.sleep(0.05)
     else:
         solved_places[myPlayer.location] = True
+        for character in solve_str2:
+          sys.stdout.write(character)
+          sys.stdout.flush()
+          time.sleep(0.05)
 
 def player_examine(action):
     examine_str1 = ("\nYou have examined sector " + myPlayer.location.upper() + ".")
@@ -879,113 +883,159 @@ def main_game_loop():
         prompt()
 
 def setup_game():
-    print("\n" * 200)
+  print("\n" * 200)
+  question1_1 = "##############################\n"
+  question1_2 = "#  Hello, what's your name?  #\n"
+  question1_3 = "##############################\n"
+  for character in question1_1:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.015)
+  for character in question1_2:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.015)
+  for character in question1_3:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.015)
+  player_name = input("> ")
+  myPlayer.name = player_name
 
-    question1 = "Hello, what's your name?\n"
-    for character in question1:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    player_name = input("> ")
-    myPlayer.name = player_name
+  print("\n" * 200)
+  question2_1 = "##################################################################" + ("#" * (len(player_name))) + "\n"
+  question2_2 = "#  Hello " + player_name + ", what role would you like to play?" + " " * (len(player_name) + 21 - len(player_name)) + "#\n"
+  question2_3 = "#  (Type the number of the position you would like to take)" + (" " * (len(player_name) + 6)) + "#\n"
+  question2_4 = "##################################################################" + ("#" * (len(player_name))) + "\n"
+  question2_5 = "#  1 - Trader" + (" " * (len(player_name) + 52)) + "#\n"
+  question2_6 = "#  2 - Warrior" + (" " * (len(player_name) + 51)) + "#\n"
+  question2_7 = "#  3 - Explorer" + (" " * (len(player_name) + 50)) + "#\n"
+  question2_8 = "##################################################################" + "#" * (len(player_name)) + "\n"
+  for character in question2_1:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_2:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_3:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_4:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_5:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_6:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_7:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  for character in question2_8:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.01)
+  player_job_int = input("> ")
+  valid_job_ints = ['1', '2', '3']
+  if player_job_int == 1:
+    player_job_str = "Trader"
+    myPlayer.job = player_job_str
+  elif player_job_int == 2:
+    player_job_str = "Warrior"
+    myPlayer.job = player_job_str
+  elif player_job_int == 3:
+    player_job_str = "Explorer"
+    myPlayer.job = player_job_str
+  else:
+    while player_job_int not in valid_job_ints:
+      player_job_int = input("> ")
+    if player_job_int.lower() in valid_job_ints:
+      myPlayer.job = player_job_str
+      print("You are now a " + player_job_str + "!\n")
 
-    question2 = "Hello " + player_name +", what role would you like to play?\n"
-    question2added = "(You can play as a warrior, trader or explorer)\n"
-    for character in question2:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    time.sleep(0.5)
-    for character in question2added:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    player_job = input("> ")
-    valid_jobs = ['warrior', 'trader', 'explorer']
-    if myPlayer.job.lower() in valid_jobs:
-        myPlayer.job = player_job
-        print("You are now a " + player_job + "!\n")
-    while player_job not in valid_jobs:
-        player_job = input("> ")
-        if myPlayer.job.lower() in valid_jobs:
-            myPlayer.job = player_job
-            print("You are now a " + player_job + "!\n")
+  ### PLAYER STATS ###
+  if myPlayer.job is 'warrior':
+    myPlayer.hp = 100
+    myPlayer.bp = 60
+    myPlayer.vp = 20
+  if myPlayer.job is 'trader':
+    myPlayer.hp = 60
+    myPlayer.bp = 100
+    myPlayer.vp = 20
+  if myPlayer.job is 'explorer':
+    myPlayer.hp = 60
+    myPlayer.bp = 20
+    myPlayer.vp = 100
 
-    ### PLAYER STATS ###
-    if myPlayer.job is 'warrior':
-        self.hp = 100
-        self.bp = 60
-        self.vp = 20
-    if myPlayer.job is 'trader':
-        self.hp = 60
-        self.bp = 100
-        self.vp = 20
-    if myPlayer.job is 'explorer':
-        self.hp = 60
-        self.bp = 20
-        self.vp = 100
+### INTRODUCTION ###
+  question3 = "Welcome, " + player_name + " the " + myPlayer.job + ".\n"
+  for character in question3:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.05)
 
-    ### INTRODUCTION ###
-    question3 = "Welcome, " + player_name + " the " + player_job + ".\n"
-    for character in question3:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
+  time.sleep(1)
+  print('\n' * 200)
+  speech1 = "Welcome to this vast galaxy!\n"
+  speech2 = "I hope it greets you well!\n"
+  speech3 = "Just make sure you don't get lost...\n"
+  speech4 = "Heheheh...\n"
+  for character in speech1:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.03)
+  for character in speech2:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.03)
+  for character in speech3:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.1)
+  for character in speech4:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.2)
 
-    time.sleep(1)
-    print('\n' * 200)
-    speech1 = "Welcome to this vast galaxy!\n"
-    speech2 = "I hope it greets you well!\n"
-    speech3 = "Just make sure you don't get lost...\n"
-    speech4 = "Heheheh...\n"
-    for character in speech1:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    for character in speech2:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    for character in speech3:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.1)
-    for character in speech4:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.2)
+  time.sleep(2)
 
-    time.sleep(2)
+  setup_str1 = ("\n" * 200)
+  setup_str2 = ("\n##########################")
+  setup_str3 = ("\n#    Let's start now!    #")
+  setup_str4 = ("\n##########################")
+  setup_str5 = ("\n" * 200)
+  for character in setup_str1:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.00001)
+  for character in setup_str2:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.03)
+  for character in setup_str3:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.03)
+  for character in setup_str4:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.03)
 
-    setup_str1 = ("\n" * 200)
-    setup_str2 = ("\n##########################")
-    setup_str3 = ("\n#    Let's start now!    #")
-    setup_str4 = ("\n##########################")
-    setup_str5 = ("\n" * 200)
-    for character in setup_str1:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.00001)
-    for character in setup_str2:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    for character in setup_str3:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
-    for character in setup_str4:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
+  time.sleep(1)
 
-    time.sleep(1)
+  for character in setup_str5:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.00001)
 
-    for character in setup_str5:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.00001)
-
-    main_game_loop()
+  main_game_loop()
 
 title_screen()
