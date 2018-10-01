@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Simplify starting questions with integer inputs
 
 ### Changed
-- Correct strings directly involved with 
+- Correct strings directly involved with starting questions
 
 ## [0.0.7] - 2018-09-19
 
