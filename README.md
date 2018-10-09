@@ -5,7 +5,7 @@ This project was started on September 2, 2018.
 
 (readme last updated on September 18, 2018)
 
-This game was created to imagine the idea of discovering new star systems more closely than by observation with telescopes from Earth.
+This game was created to imagine the idea of discovering new star systems in a fictional universe.
 
 The game already includes several features, including the following commands:
 
