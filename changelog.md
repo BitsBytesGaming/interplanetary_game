@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Faction control
 
 ## Current tasks
+- Update changelog.md, readme.md
 - Write sector keys
 - Update sector names, descriptions, and examination strings
 
