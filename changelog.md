@@ -10,11 +10,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Action-based skill leveling + risk
 - Faction control
 - Story implementation:
-  - immediate battle
-  - asteroid mining
-  - space station resource transfer
+  - Immediate battle
+  - Asteroid mining
+  - Space station resource transfer
+  - Advanced weapons distribution
+  - Warp currents
 - Variable difficulty
-- Ship damage
+- Ships
+  - Damage
+  - Part damage
+- Warping
+  - Warp currents
+  - Warp factor
+- Moddability
+  - Individual game object files
 
 ## Current tasks
 - Update changelog.md, readme.md
