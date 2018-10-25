@@ -9,13 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reputation-based encounters + risk
 - Action-based skill leveling + risk
 - Faction control
+- Variable difficulty
 - Story implementation:
   - Immediate battle
   - Asteroid mining
   - Space station resource transfer
   - Advanced weapons distribution
   - Warp currents
-- Variable difficulty
 - Ships
   - Damage
   - Part damage
