@@ -6,8 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Planned features (backlog)
 - Resources and trading
-- Reputation-based encounters
+- Reputation-based encounters + risk
+- Action-based skill leveling + risk
 - Faction control
+- Story implementation
 
 ## Current tasks
 - Update changelog.md, readme.md
