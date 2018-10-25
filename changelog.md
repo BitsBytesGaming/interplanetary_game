@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Planned features (backlog)
 - Resources and trading
-- Reputation
+- Reputation-based encounters
 - Faction control
 
 ## Current tasks
