@@ -6,7 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Planned features (backlog)
 - Resources and trading
-- Reputation-based encounters + risk
 - Action-based skill leveling + risk
 - Faction control
 - Variable difficulty
@@ -29,6 +28,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update changelog.md, readme.md
 - Write sector keys
 - Update sector names, descriptions, and examination strings
+
+## [[0.0.9]] - 2018-11-01
+
+### Added
+- Ship purchase, view, and preview functions
+
+### Changed
+- Concatenate text printing "for-loops" into a single function
+- Simplify blocks of code variables into lists
+
+### Removed
+- Remove junk code
+- Remove unnecessary comments
 
 ## [[0.0.8] - 2018-10-01
 
